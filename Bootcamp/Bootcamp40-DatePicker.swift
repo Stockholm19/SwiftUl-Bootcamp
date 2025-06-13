@@ -31,9 +31,12 @@ struct DatePickerBootcamp: View {
             Text(dateFormatter.string(from: selectedDate))
                 .font(.title)
             
-            DatePicker("Select a date", selection: $selectedDate, in: startingDate...endingDate, displayedComponents: .date)
-                .accentColor(.red)
-                .datePickerStyle(WheelDatePickerStyle())
+            DatePicker(
+                "Select a date",
+                selection: $selectedDate,
+                in: startingDate...,
+                displayedComponents: .date
+            )
         }
         .padding()
     }
